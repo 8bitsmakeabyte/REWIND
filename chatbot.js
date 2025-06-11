@@ -1,4 +1,3 @@
-require('dotenv').config({ path: '.env.local' });
 // DOM Elements
 const chatContainer = document.querySelector(".chat-container");
 const messageInput = document.querySelector("#message-input");
@@ -15,8 +14,7 @@ const currentTimeEl = document.querySelector("#current-time");
 let userMessage = null;
 let isResponseGeneration = false;
 let recognition = null;
-    const apiKey = "/api/chat"; // now points to your own backend
-    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+    const apiKey = "/api/chat"; 
 
 // Initialize date and time display
 function updateDateTime() {
