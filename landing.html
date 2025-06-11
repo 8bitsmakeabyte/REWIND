@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewind - Landing Page</title>
+    <link rel="stylesheet" href="landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Modern font -->
+</head>
+<body>
+    <div class="loading-container">
+        <div class="logo">
+            <img src="images/rewind-button.png" alt="Rewind Logo"> <!-- Replace with your logo path -->
+        </div>
+        <h1>Rewind</h1>
+        <p>Making Mental Health Accessible</p>
+        <p class="names">By Aruna, Vasudha & Sania</p>
+    </div>
+    <script>
+        // Simulate loading time
+        setTimeout(() => {
+            document.querySelector('.loading-container').style.display = 'none';
+            // Here you can redirect to your main page or show the main content
+            window.location.href = 'login.html'; // Uncomment to redirect
+        }, 4000); // Adjust time as needed
+    </script>
+</body>
+</html>

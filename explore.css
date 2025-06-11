@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    background-color: #EAF6FF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px;
+    background-color: #3366cc; /* nice medium blue */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: left; /* Left align text */
+    font-size: 18px; /* Increased font size */
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #2851a3; /* darker blue for active/hover */
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    background-color: #3366cc; /* Match sidebar color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* Journals section styling */
+.journals-section {
+    margin-bottom: 40px;
+}
+
+.journals-section h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.journal-cards {
+    display: flex;
+    overflow-x: auto;
+}
+
+.journal-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 15px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.journal-image {
+    width: 100%;
+    height: 100px;
+    background-color: #f0f0f0; /* Placeholder background */
+    border-radius: 5px;
+}
+
+/* Blogs section styling */
+.blogs-section {
+    margin-bottom: 40px;
+}
+
+.blog-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card {
+    display: flex;
+    background-color: #E3E3E3; /* Light grey background */
+    border-radius: 16px; /* Rounded corners */
+    padding: 15px; /* Padding inside the card */
+    margin-bottom: 15px; /* Margin below the card */
+    align-items: center; /* Center items vertically */
+}
+
+.blog-thumbnail {
+    width: 80px; /* Thumbnail size */
+    height: 80px; /* Thumbnail size */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.blog-content {
+    flex-grow: 1; /* Allow text content to take remaining space */
+}
+
+.blog-title {
+    font-weight: bold; /* Bold font for title */
+    color: black; /* Black color for title */
+    font-size: 16px; /* Slightly larger font size */
+    margin: 0; /* Remove default margin */
+}
+
+.blog-author {
+    font-size: 12px; /* Smaller font size for author */
+    color: #666; /* Greyish color */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+.blog-description {
+    font-size: 12px; /* Light grey text for description */
+    color: #999; /* Light grey color */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
+    display: -webkit-box; /* For ellipsis */
+    -webkit-box-orient: vertical; /* For ellipsis */
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+}
+
+/* Experts section styling */
+.experts-section {
+    margin-bottom: 40px;
+}
+
+.expert-cards {
+    display: flex;
+}
+
+.expert-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+/* See More link styling */
+.see-more {
+    color: #999; /* Greyish tone */
+    font-size: 12px; /* Smaller size */
+    text-decoration: none;
+    font-weight: normal; /* Less bold */
+}
+
+.see-more:hover {
+    text-decoration: underline; /* Underline on hover */
+}

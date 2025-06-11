@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rewind - Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="overlay"></div>
+        </div>
+        <div class="right-panel">
+            <form class="login-form" aria-label="Login form">
+                <h1>Login</h1>
+                <label for="username" class="sr-only">Username or Email</label>
+                <input type="text" id="username" name="username" placeholder="Username or Email" required />
+
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required />
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember" name="remember" />
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit" class="btn-primary">Sign In</button>
+
+                <div class="social-login">
+                    <p>Or sign in with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="btn-social facebook" aria-label="Sign in with Facebook">
+                            <i class="fab fa-facebook-f"></i> 
+                        </button>
+                        <button type="button" class="btn-social google" aria-label="Sign in with Google">
+                            <i class="fab fa-google"></i> 
+                        </button>
+                        <button type="button" class="btn-social apple" aria-label="Sign in with Apple">
+                            <i class="fab fa-apple"></i> 
+                        </button>
+                    </div>
+                </div>
+
+                <div class="signup-line">
+                    <p>Don't have an account? <a href="#" class="sign-up">Sign up</a></p>
+                </div>
+
+                <footer class="app-footer">
+                   
+                </footer>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
+

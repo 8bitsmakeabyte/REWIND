@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e9f5ff; /* Light blue background for a modern feel */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+.loading-container {
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 3s forwards; /* Extended fade-in effect */
+}
+
+.logo img {
+    width: 150px; /* Logo size */
+    height: auto;
+    margin-bottom: 20px;
+    animation: scaleIn 1s forwards; /* Scale-in effect */
+}
+
+/* Scale-in animation for logo */
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 3.5em; /* Increased font size */
+    margin: 0.5em 0;
+    color: #2B6CB0; /* Blue color for the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+p {
+    font-size: 1.5em; /* Increased subtext size */
+    color: #333; /* Darker subtext color for better contrast */
+    margin: 0.5em 0; /* Added margin for spacing */
+}
+
+.names {
+    font-size: 1rem; /* Size for names */
+    color: #555; /* Darker color for better readability */
+    margin-top: 0.5em; /* Spacing above the names */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

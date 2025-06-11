@@ -1,0 +1,117 @@
+/* Update your existing CSS with these changes */
+/* General body styling */
+body {
+    display: flex;
+    background-color: #EAF6FF;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px;
+    background-color: #3366cc; /* nice medium blue */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #2851a3; /* darker blue on hover */
+}
+
+.sidebar .active {
+    background-color: #2851a3; /* darker blue for active link */
+}
+/* Main content styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#imagePreview {
+    max-width: 100%;
+    max-height: 300px;
+    border: 2px solid #3366cc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the container */
+    gap: 10px; /* Space between elements */
+    width: 100%; /* Take full width */
+    margin-bottom: 15px; /* Space below the container */
+}
+
+#titleInput {
+    margin-right: 0; /* Remove the right margin since we're using gap */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Style for the Save & Continue button */
+#saveAndContinueButton {
+    margin-top: 0; /* Remove any top margin */
+    width: auto; /* Let it size naturally */
+    padding: 10px 20px; /* Comfortable padding */
+    align-self: center; /* Align with other elements */
+    display: none; /* Keep it hidden initially */
+}
+
+/* Adjust the preview container */
+.preview {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between elements */
+}
+
+/* Optional: If you want all buttons to have consistent styling */
+button {
+    background-color: #2a5b9e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+button:hover {
+    background-color: #1e4a7a;
+}

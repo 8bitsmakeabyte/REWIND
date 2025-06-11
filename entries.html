@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rewind - Entries Page</title>
+  <link rel="stylesheet" href="entries.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header-container">
+    <p class="header-line1">hello buddy !</p>
+    <p class="header-line2">ready to rewind your day?</p>
+  </header>
+
+  <section class="calendar-section">
+    <div class="month-year">
+      <button class="month-nav prev-month" aria-label="Previous Month"><</button>
+      <div class="month-year-text">
+        <span class="month-name">January</span> <span class="year">2025</span>
+      </div>
+      <button class="month-nav next-month" aria-label="Next Month">></button>
+    </div>
+
+    <div class="weekdays">
+      <button class="weekday-btn">Sun</button>
+      <button class="weekday-btn">Mon</button>
+      <button class="weekday-btn">Tue</button>
+      <button class="weekday-btn">Wed</button>
+      <button class="weekday-btn">Thu</button>
+      <button class="weekday-btn">Fri</button>
+      <button class="weekday-btn">Sat</button>
+    </div>
+
+    <div class="dates-grid">
+      <!-- Dates 1 to 31 for January -->
+      <!-- Each date is a button -->
+      <!-- For simplicity, showing 31 dates -->
+      <button class="date-btn">1</button>
+      <button class="date-btn">2</button>
+      <button class="date-btn">3</button>
+      <button class="date-btn">4</button>
+      <button class="date-btn">5</button>
+      <button class="date-btn">6</button>
+      <button class="date-btn">7</button>
+      <button class="date-btn">8</button>
+      <button class="date-btn">9</button>
+      <button class="date-btn">10</button>
+      <button class="date-btn">11</button>
+      <button class="date-btn">12</button>
+      <button class="date-btn">13</button>
+      <button class="date-btn">14</button>
+      <button class="date-btn">15</button>
+      <button class="date-btn">16</button>
+      <button class="date-btn">17</button>
+      <button class="date-btn">18</button>
+      <button class="date-btn">19</button>
+      <button class="date-btn">20</button>
+      <button class="date-btn">21</button>
+      <button class="date-btn">22</button>
+      <button class="date-btn">23</button>
+      <button class="date-btn">24</button>
+      <button class="date-btn">25</button>
+      <button class="date-btn">26</button>
+      <button class="date-btn">27</button>
+      <button class="date-btn">28</button>
+      <button class="date-btn">29</button>
+      <button class="date-btn">30</button>
+      <button class="date-btn">31</button>
+    </div>
+  </section>
+
+  <section class="journal-section">
+    <p class="journal-title">Today's Journal entry</p>
+    <div class="journal-previews">
+      <button class="preview-box add-entry" title="Add new entry" id="add-entry-btn">
+        <span class="plus-icon">+</span>
+      </button>
+      <div class="preview-box">
+        <div class="entry-date">Jan 1</div>
+        <div class="image-placeholder image1"></div>
+        <div class="entry-text">First day at college</div>
+      </div>
+      <div class="preview-box">
+        <div class="entry-date">Jan 2</div>
+        <div class="image-placeholder image2"></div>
+        <div class="entry-text">Hangout with friends</div>
+      </div>
+      <div class="preview-box">
+        <div class="entry-date">Jan 3</div>
+        <div class="image-placeholder image3"></div>
+        <div class="entry-text">Relaxing weekend</div>
+      </div>
+      <div class="preview-box">
+        <div class="entry-date">Jan 4</div>
+        <div class="image-placeholder image4"></div>
+        <div class="entry-text">cooking class</div>
+      </div>
+      <div class="preview-box">
+        <div class="entry-date">Jan 5</div>
+        <div class="image-placeholder image5"></div>
+        <div class="entry-text">study session</div>
+      </div>
+      <div class="preview-box">
+        <div class="entry-date">Jan 6</div>
+        <div class="image-placeholder image6"></div>
+        <div class="entry-text">picnic</div>
+      </div>
+      <div class="preview-box">
+        <div class="entry-date">Jan 7</div>
+        <div class="image-placeholder image7"></div>
+        <div class="entry-text">sketching</div>
+      </div>
+    </div>
+  </section>
+  <script src="entries.js"></script>
+</body>
+</html>

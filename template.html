@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gratitude Journal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="template.css" />
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="home.html" class="active"><i class=""></i> Home</a></li>
+        <li><a href="explore.html"><i class=""></i> Explore</a></li>
+        <li><a href="entries.html"><i class=""></i> Entries</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="header">
+      <div class="header-overlay">
+        <h1 class="title">Gratitude Journal</h1>
+        <h2 class="subtitle">By Sarah Jensen</h2>
+        <div class="rating-container">
+          <div class="stars" aria-label="4.2 out of 5 stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star half">&#9733;</span>
+          </div>
+          <span class="rating-text">4.2 out of 5</span>
+        </div>
+        <button class="cta-button" onclick="window.location.href='image-entry.html'">Use Template</button>
+      </div>
+    </header>
+
+    <section class="description-section">
+      <hr class="divider" />
+      <div class="description-content">
+        <h3>Welcome to your Gratitude Journal</h3>
+        <p>
+          Cultivate a daily habit of gratitude with this beautifully designed journal template. Reflect on your day, appreciate the little things, and grow your happiness.
+        </p>
+      </div>
+      <hr class="divider" />
+    </section>
+
+    <section class="template-preview">
+      <h3 class="section-heading">Sample Journal Entries</h3>
+      <div class="entries-container">
+        <article class="entry-card">
+          <div class="entry-date">Apr 20, 2024</div>
+          <p class="entry-prompt">What made you smile today?</p>
+          <div class="image-placeholder image-placeholder-1" aria-label="Image placeholder 1"></div>
+          <div class="entry-buttons">
+            <button class="primary-btn small-btn">Go Deeper</button>
+            <div class="action-container">
+              <div class="icon-group">
+                <button class="icon-btn" aria-label="Voice"><i class="fas fa-microphone"></i></button>
+                <button class="icon-btn" aria-label="Gallery"><i class="fas fa-image"></i></button>
+              </div>
+              <button class="finish-btn">Finish Writing</button>
+            </div>
+          </div>
+        </article>
+        <article class="entry-card">
+          <div class="entry-date">Apr 19, 2024</div>
+          <p class="entry-prompt">how was your 1st day at college?</p>
+          <div class="image-placeholder image-placeholder-2" aria-label="Image placeholder 2"></div>
+          <div class="entry-buttons">
+            <button class="primary-btn small-btn">Go Deeper</button>
+            <div class="action-container">
+              <div class="icon-group">
+                <button class="icon-btn" aria-label="Voice"><i class="fas fa-microphone"></i></button>
+                <button class="icon-btn" aria-label="Gallery"><i class="fas fa-image"></i></button>
+              </div>
+              <button class="finish-btn">Finish Writing</button>
+            </div>
+          </div>
+        </article>
+        <article class="entry-card">
+          <div class="entry-date">Apr 18, 2024</div>
+          <p class="entry-prompt">What challenged you today?</p>
+          <div class="image-placeholder image-placeholder-3" aria-label="Image placeholder 3"></div>
+          <div class="entry-buttons">
+            <button class="primary-btn small-btn">Go Deeper</button>
+            <div class="action-container">
+              <div class="icon-group">
+                <button class="icon-btn" aria-label="Voice"><i class="fas fa-microphone"></i></button>
+                <button class="icon-btn" aria-label="Gallery"><i class="fas fa-image"></i></button>
+              </div>
+              <button class="finish-btn">Finish Writing</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2024 Sarah Jensen</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="template.js"></script>
+</body>
+</html>

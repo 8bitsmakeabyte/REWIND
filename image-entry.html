@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="image-entry.css">
+    <title>Rewind - Image Entry Page</title>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="home.html" class="active">Home</a>
+        <a href="entries.html">Entries</a>
+        <a href="explore.html">Explore</a>
+    </div>
+    <div class="main-content">
+        <h1>Upload Journal Cover and Title</h1>
+        <input type="file" id="imageUpload" accept="image/*">
+        <div class="preview" style="display: none;">
+            <img id="imagePreview" src="" alt="Image Preview">
+            <div class="title-container">
+                <input type="text" id="titleInput" placeholder="Edit title..." disabled>
+                <button id="saveButton">Save</button>
+            </div>
+            <button id="saveAndContinueButton" style="display: none;">Save and Continue</button>
+        </div>
+    </div>
+
+    <script src="image-entry.js"></script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+/* Basic reset and base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #b3d9ff; /* soft baby blue background */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 200px;
+  background-color: #3366cc; /* nice medium blue */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: bold;
+  border-left: 4px solid transparent;
+  transition: background-color 0.3s, border-left 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #4d88ff; /* lighter blue on hover and active */
+  border-left: 4px solid #99bbff;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  position: relative; /* for positioning profile photo */
+}
+
+/* Make sure the button and profile photo stack nicely */
+.header > .new-entry-btn,
+.header > .profile-photo {
+  display: block;
+}
+
+/* Profile photo styling */
+.profile-photo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #668cff; /* medium baby blue */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  border: 2px solid white;
+  background-size: cover;
+  background-position: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  box-shadow: 0 0 8px 2px #335dcc;
+}
+
+/* New Entry button styles */
+.new-entry-btn {
+  margin-top: 65px; /* space below profile photo */
+  margin-right: 10px;
+  align-self: flex-end;
+  background-color: #99bbff; /* light baby blue */
+  border: none;
+  color: #003366; /* dark blue */
+  font-size: 1.2rem;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.new-entry-btn:hover {
+  background-color: #668cff; /* medium baby blue */
+  color: white;
+}
+
+/* Greeting text */
+.greeting {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #003366;
+  margin: 0;
+}
+
+.sub-greeting {
+  font-size: 1.1rem;
+  color: #004080;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* Previous entries section */
+.entries-preview {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.entry-item {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Insights button */
+.insights-btn {
+  background-color: #668cff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 150px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.insights-btn:hover {
+  background-color: #335dcc;
+}
+
+/* Mood tracker container */
+.mood-tracker {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.mood-tracker h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  color: #003366;
+}
+
+/* Mood options */
+.moods {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.mood {
+  background-color: #cce0ff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  color: #003366;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.mood:hover,
+.mood.selected {
+  background-color: #668cff;
+  color: white;
+}
+
+/* Emoji style */
+.emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* Mood Cards Section */
+.mood-cards-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.mood-cards-section h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.mood-cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mood-card {
+  flex: 1 1 0;
+  background-color: #eee;
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 140px;
+  max-width: 180px;
+}
+
+.mood-card.joy {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.mood-card.anxiety {
+  background-color: #FFEB3B;
+  color: #333;
+}
+
+.mood-card.overwhelmed {
+  background-color: #E91E63;
+  color: white;
+}
+
+.mood-card.sadness {
+  background-color: #2196F3;
+  color: white;
+}
+
+.mood-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.mood-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Mood Analysis Section */
+.mood-analysis {
+  background: #003366; /* Dark blue background for contrast */
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  color: white;
+}
+
+.mood-analysis h2 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.mood-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 25px;
+}
+
+.mood-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  min-width: 120px;
+}
+
+.mood-label {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+}
+
+/* SVG circle background */
+.progress-ring__background {
+  stroke: rgba(255, 255, 255, 0.2);
+  transition: stroke-dashoffset 0.35s;
+}
+
+/* SVG circle progress */
+.progress-ring__circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-dasharray: 326.72; /* 2 * PI * 52 */
+  stroke-dashoffset: 326.72;
+  transition: stroke-dashoffset 1s ease-out;
+  stroke: white; /* White stroke for progress */
+  stroke-linecap: round;
+}
+
+/* Percentage text inside circle */
+.progress-text {
+  fill: white;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .mood-cards-container {
+    max-width: 90%;
+    gap: 15px;
+  }
+  .mood-card {
+    min-width: 120px;
+    max-width: 160px;
+    padding: 12px;
+  }
+  .mood-icon {
+    font-size: 2rem;
+  }
+  .progress-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mood-cards-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mood-card {
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mood-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    padding: 10px 0;
+    justify-content: space-around;
+  }
+
+  .sidebar a {
+    padding: 10px 15px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .sidebar a:hover,
+  .sidebar a.active {
+    border-left: none;
+    border-bottom: 3px solid #99bbff;
+    background-color: transparent;
+  }
+
+  .main-content {
+    padding: 15px 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header > .new-entry-btn,
+  .header > .profile-photo {
+    position: static;
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  .profile-photo {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #668cff;
+    box-shadow: none;
+  }
+
+  .new-entry-btn {
+    margin-top: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .entries-preview {
+    flex-direction: column;
+  }
+
+  .entry-item {
+    width: 100%;
+  }
+
+  .insights-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .moods {
+    justify-content: space-between;
+  }
+
+  .mood {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sidebar a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .mood {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rewind - Home Page</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <a href="#" class="active">Home</a>
+    <a href="entries.html">Entries</a>
+    <a href="explore.html">Explore</a>
+    
+  </div>
+
+  <div class="main-content">
+    <header class="header">
+      <div>
+        <h1 class="greeting">Hello, <span id="username">buddy</span>!</h1>
+        <p class="sub-greeting">Ready to rewind your day?</p>
+      </div>
+      <button class="new-entry-btn" title="New Entry" aria-label="New Entry" onclick="window.location.href='chatbot.html'">New Entry</button>
+      <div class="profile-photo" title="Profile Photo" aria-label="Profile Photo"></div>
+    </header>
+
+    <section class="entries-preview">
+      <h2>Previous Entries :</h2>
+      <div class="entry-item">Entry 1: Had a great day!</div>
+      <div class="entry-item">Entry 2: Feeling a bit tired.</div>
+      <div class="entry-item">Entry 3: Excited about the weekend.</div>
+    </section>
+
+    <!-- Mood Analysis Section -->
+    
+    <section class="mood-analysis">
+      <h2> Insight:Mood Analysis</h2>
+      <div class="mood-cards">
+        <div class="mood-card joy">
+          <svg class="progress-ring" width="120" height="120">
+            <circle class="progress-ring__background" stroke="#eee" stroke-width="10" fill="transparent" r="52" cx="60" cy="60"/>
+            <circle class="progress-ring__circle" stroke="#4CAF50" stroke-width="10" fill="transparent" r="52" cx="60" cy="60" stroke-linecap="round"/>
+            <text x="60" y="68" text-anchor="middle" font-size="24" fill="white" font-weight="bold" class="progress-text">0%</text>
+          </svg>
+          <div class="mood-icon" aria-label="Joy" style="font-size: 2.5rem; margin-top: 10px;">😊</div>
+          <div class="mood-label">Joy</div>
+        </div>
+    
+        <div class="mood-card anxiety">
+          <svg class="progress-ring" width="120" height="120">
+            <circle class="progress-ring__background" stroke="#eee" stroke-width="10" fill="transparent" r="52" cx="60" cy="60"/>
+            <circle class="progress-ring__circle" stroke="#FF5722" stroke-width="10" fill="transparent" r="52" cx="60" cy="60" stroke-linecap="round"/>
+            <text x="60" y="68" text-anchor="middle" font-size="24" fill="white" font-weight="bold" class="progress-text">0%</text>
+          </svg>
+          <div class="mood-icon" aria-label="Anxiety" style="font-size: 2.5rem; margin-top: 10px;">😰</div>
+          <div class="mood-label">Anxiety</div>
+        </div>
+    
+        <div class="mood-card overwhelmed">
+          <svg class="progress-ring" width="120" height="120">
+            <circle class="progress-ring__background" stroke="#eee" stroke-width="10" fill="transparent" r="52" cx="60" cy="60"/>
+            <circle class="progress-ring__circle" stroke="#E91E63" stroke-width="10" fill="transparent" r="52" cx="60" cy="60" stroke-linecap="round"/>
+            <text x="60" y="68" text-anchor="middle" font-size="24" fill="white" font-weight="bold" class="progress-text">0%</text>
+          </svg>
+          <div class="mood-icon" aria-label="Overwhelmed" style="font-size: 2.5rem; margin-top: 10px;">😵‍💫</div>
+          <div class="mood-label">Overwhelmed</div>
+        </div>
+    
+        <div class="mood-card sadness">
+          <svg class="progress-ring" width="120" height="120">
+            <circle class="progress-ring__background" stroke="#eee" stroke-width="10" fill="transparent" r="52" cx="60" cy="60"/>
+            <circle class="progress-ring__circle" stroke="#2196F3" stroke-width="10" fill="transparent" r="52" cx="60" cy="60" stroke-linecap="round"/>
+            <text x="60" y="68" text-anchor="middle" font-size="24" fill="white" font-weight="bold" class="progress-text">0%</text>
+          </svg>
+          <div class="mood-icon" aria-label="Sadness" style="font-size: 2.5rem; margin-top: 10px;">😢</div>
+          <div class="mood-label">Sadness</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function setProgress(circle, percent) {
+      const radius = circle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+      const offset = circumference - (percent / 100) * circumference;
+      circle.style.strokeDashoffset = offset;
+    }
+
+    document.querySelectorAll('.mood-card').forEach(card => {
+      const circle = card.querySelector('.progress-ring__circle');
+      const text = card.querySelector('.progress-text');
+      let percent = 0;
+
+      // Assign percentage based on mood
+      if (card.classList.contains('joy')) {
+        percent = 60;
+      } else if (card.classList.contains('anxiety')) {
+        percent = 10;
+      } else if (card.classList.contains('overwhelmed')) {
+        percent = 14;
+      } else if (card.classList.contains('sadness')) {
+        percent = 16;
+      }
+
+      // Animate the progress ring and text
+      let current = 0;
+      function animate() {
+        if (current <= percent) {
+          setProgress(circle, current);
+          text.textContent = current + '%';
+          current++;
+          requestAnimationFrame(animate);
+        }
+      }
+      animate();
+    });
+  </script>
+</body>
+</html> 
