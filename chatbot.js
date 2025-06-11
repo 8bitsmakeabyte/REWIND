@@ -14,7 +14,6 @@ const currentTimeEl = document.querySelector("#current-time");
 let userMessage = null;
 let isResponseGeneration = false;
 let recognition = null;
-    const apiKey = "/api/chat"; 
 
 // Initialize date and time display
 function updateDateTime() {
@@ -79,7 +78,7 @@ const showTypingEffect = (text, bubble) => {
 
 const generateAPIResponse = async (userMsg) => {
     try {
-      const response = await fetch(API_URL, {
+        const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userMessage: userMsg })
