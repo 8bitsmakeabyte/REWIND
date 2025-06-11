@@ -15,7 +15,7 @@ const currentTimeEl = document.querySelector("#current-time");
 let userMessage = null;
 let isResponseGeneration = false;
 let recognition = null;
-    const apiKey = process.env.API_KEY;
+    const apiKey = "/api/chat"; // now points to your own backend
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
 // Initialize date and time display
@@ -79,31 +79,24 @@ const showTypingEffect = (text, bubble) => {
     }, 50);
 };
 
-// Generate API response
 const generateAPIResponse = async (userMsg) => {
     try {
-        const response = await fetch(API_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                contents: [{
-                    role: "user",
-                    parts: [{
-                        text: `${userMsg}\n\nAnalyze this statement and return only 1 question that will help me process the feelings.`
-                    }]
-                }]
-            })
-        });
-
-        const data = await response.json();
-        if (!response.ok) throw new Error(data.error?.message || "API request failed");
-
-        return data?.candidates[0]?.content?.parts[0]?.text || "No response received";
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userMessage: userMsg })
+      });
+  
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || "Server error");
+  
+      return data.reply;
     } catch (error) {
-        console.error("API Error:", error);
-        return `Error: ${error.message}`;
+      console.error("API Error:", error);
+      return `Error: ${error.message}`;
     }
-};
+  };
+  
 
 // Show loading indicator
 const showLoadingIndicator = () => {
